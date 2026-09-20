@@ -1,286 +1,196 @@
+<h1 align="center">
+  <img src="resource/pptagent.png" width="300" alt="PPTAgent">
+</h1>
 
-<div align="right">
-  <details>
-    <summary >🌐 Language</summary>
-    <div>
-      <div align="center">
-        <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=en">English</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=zh-CN">简体中文</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=zh-TW">繁體中文</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=ja">日本語</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=ko">한국어</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=hi">हिन्दी</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=th">ไทย</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=fr">Français</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=de">Deutsch</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=es">Español</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=it">Italiano</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=ru">Русский</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=pt">Português</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=nl">Nederlands</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=pl">Polski</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=ar">العربية</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=fa">فارسی</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=tr">Türkçe</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=vi">Tiếng Việt</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=id">Bahasa Indonesia</a>
-        | <a href="https://openaitx.github.io/view.html?user=icip-cas&project=PPTAgent&lang=as">অসমীয়া</a>
-      </div>
-    </div>
-  </details>
-</div>
+> [!TIP]
+> **PPTAgent Skill for Claude Code, Codex & OpenCode Now Available!**
+>
+> Create, revise, and visually review editable PowerPoint decks with your coding agent.
+>
+> **[Install the Skill →](#install-skill)** · **[Use Atria Dawn Preview →](#quick-start)**
+>
+> **Free Token Plan:** [Discovery](https://discovery-home.intern-ai.org.cn/) · [Atria API](https://api.atria-asi.ai/)
+>
+> You can use a multimodal vision model as a multimodal reviewer and apply for an API token through the [Duanyan (端砚) Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=1). We recommend `deepseek-v4-flash-vision` as the multimodal model. [Setup guide →](skills/pptagent/README.md#visual-review)
 
-<div align="center">
-  <img src="resource/pptagent-logo.jpg" width="240px" alt="https://github.com/icip-cas/PPTAgent">
-</div>
+> [!IMPORTANT]
+> **Looking for the previous runtime or reproducing the research papers?** Use
+> these pinned versions instead of the current development branch:
+>
+> - **Complete pre-Skill repository:** [v2.1.0](https://github.com/icip-cas/PPTAgent/tree/v2.1.0)
+> - **PPTAgent (EMNLP 2025):** [paper](https://arxiv.org/abs/2501.03936) · [code at v0.2.0](https://github.com/icip-cas/PPTAgent/tree/v0.2.0)
+> - **DeepPresenter (ACL 2026):** [paper](https://arxiv.org/abs/2602.22839) · [code at v1.1.37](https://github.com/icip-cas/PPTAgent/tree/v1.1.37)
 
-<table>
-  <tr>
-    <td width="50%">
-      <video controls width="100%" src="https://github.com/user-attachments/assets/314bed6a-185e-4c81-9de5-35728e83e22a">
-      </video>
-    </td>
-    <td width="50%">
-      <video controls width="100%" src="https://github.com/user-attachments/assets/96eee616-5f79-4ea1-bd7f-bcaa466eda9e">
-      </video>
-    </td>
-  </tr>
-</table>
-
-We **strongly recommend** deploying our fine-tuned model for the best experience with our agent project. According to our experiments, it **significantly outperforms existing open-source models**.
-
-| Format | HuggingFace | ModelScope |
-|--------|-------------|------------|
-| GGUF (Quantized) | [Forceless/DeepPresenter-9B-GGUF](https://huggingface.co/Forceless/DeepPresenter-9B-GGUF) | [forceless/DeepPresenter-9B-GGUF](https://modelscope.cn/models/forceless/DeepPresenter-9B-GGUF) |
-| Full Weights | [Forceless/DeepPresenter-9B](https://huggingface.co/Forceless/DeepPresenter-9B) | [forceless/DeepPresenter-9B](https://modelscope.cn/models/forceless/DeepPresenter-9B) |
+<p align="center">
+  <img src="resource/pptagent-demo.gif" width="50%" alt="PPTAgent demo">
+</p>
 
 ## 📅 News
 
+- **[2026/09]** 🚀 Introducing **Atria Dawn Preview**, a new agentic model jointly released by Shanghai AI Laboratory, Fudan University, the Institute of Software (Chinese Academy of Sciences), Renmin University of China, the Institute of Automation (Chinese Academy of Sciences), and East China Normal University. **Claim a generous free Token Plan:** [Discovery](https://discovery-home.intern-ai.org.cn/) · [Atria](https://api.atria-asi.ai/). [Use Atria with PPTAgent Skill →](skills/pptagent/README.md#try-atria)
+- **[2026/09]** 🧩 Released **[PPTAgent Skill](skills/pptagent/README.md)** for **Claude Code, Codex & OpenCode** — create, visually review, and export editable PowerPoint decks with your coding agent. [Get started →](skills/pptagent/README.md#quick-start)
 - **[2026/04]** 🎉 [DeepPresenter](https://arxiv.org/abs/2602.22839) accepted to **ACL 2026**!
 - **[2026/03]** 🤗 We released fine-tuned models and taskset on [Hugging Face](https://huggingface.co/collections/ICIP/deeppresenter).
 - **[2026/01]** 🆕 Freeform & template generation now support PPTX export and offline mode. Context management added to prevent context overflow.
 - **[2025/12]** 🔥 Released **DeepPresenter** codebase with major upgrades — Deep Research Integration, Free-Form Visual Design, Autonomous Asset Creation, Text-to-Image Generation, and an Agent Environment with sandbox & 20+ tools.
-- **[2025/09]** 🛠️ MCP server support added — see [MCP Server](PPTAgent/DOC.md#mcp-server-) for configuration details.
+- **[2025/09]** 🛠️ MCP server support added — see the [v1.1.37 documentation](https://github.com/icip-cas/PPTAgent/blob/v1.1.37/pptagent/DOC.md#mcp-server-) for details.
 - **[2025/08]** 🎉 [PPTAgent](https://arxiv.org/abs/2501.03936) accepted to **EMNLP 2025**!
 - **[2025/05]** ⭐ Reached **1,000 stars** on GitHub!
 - **[2025/01]** 🔓 Open-sourced the PPTAgent codebase.
 
-## Usage 📖
+<a id="install-skill"></a>
 
-> [!IMPORTANT]
-> Windows is not supported. If you are on Windows, please use WSL.
->
-> We strongly recommend starting with the CLI and minimum task to confirm dependencies and environment is configured correctly.
+## Install PPTAgent Skill 🧩
 
-### Configuration
+**Requirements:** Claude Code, Codex CLI, or OpenCode; Linux (including WSL) or macOS; [uv](https://docs.astral.sh/uv/getting-started/installation/); npm; and LibreOffice available as `libreoffice` on PATH. On macOS, also install Google Chrome for the converter.
 
-If you use the CLI, `pptagent onboard` can help create and update these configurations interactively. If you use Docker Compose or build from source, you should prepare them manually:
+### 1. Install the runtime
 
-```bash
-cp deeppresenter/config.yaml.example deeppresenter/config.yaml
-cp deeppresenter/mcp.json.example deeppresenter/mcp.json
-```
-
-#### Optional Services That Improve Quality
-
-The following services can noticeably improve generation quality, especially for research depth, PDF parsing, and visual asset creation:
-
-- **Tavily**: improves web search quality. Apply for an API key at [tavily.com](https://www.tavily.com/), then set `TAVILY_API_KEY` in [`deeppresenter/mcp.json`](deeppresenter/mcp.json).
-- **MinerU**: improves PDF parsing quality. You can either apply for an API key at [mineru.net](https://mineru.net/apiManage/docs) and set `MINERU_API_KEY` in [`deeppresenter/mcp.json`](deeppresenter/mcp.json), or deploy MinerU locally and set `MINERU_API_URL` instead.
-- **Text-to-image model**: improves image generation quality. Configure `t2i_model` in [`deeppresenter/config.yaml`](deeppresenter/config.yaml).
-
-
-If you want a fully offline setup, deploy MinerU locally and set `offline_mode: true` in `deeppresenter/config.yaml` to avoid loading network-dependent tools such as web search.
-
-More configurable variables can be found in [constants.py](deeppresenter/utils/constants.py).
-
-### 1. Personal Use / OpenClaw Integration: CLI
-
-> [!NOTE]
-> On macOS, the CLI may automatically install several local dependencies, including Homebrew, Node.js, Docker, poppler, Playwright, and llama.cpp.
->
-> On Linux, you should prepare the environment by yourself.
-
-Use this mode if you want the fastest local setup or want to plug DeepPresenter into OpenClaw through the CLI.
+On Debian/Ubuntu, install the system dependencies first:
 
 ```bash
-# Install uv
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# First-time interactive setup
-uvx pptagent onboard
-
-# Generate a presentation
-uvx pptagent generate "Single Page with Title: Hello World" -o hello.pptx
-
-# Generate with attachments
-uvx pptagent generate "Q4 Report" \
-  -f data.xlsx \
-  -f charts.pdf \
-  -p "10-12" \
-  -o report.pptx
+sudo apt-get install npm libreoffice-impress
 ```
 
-| Command             | Description                                       |
-| ------------------- | ------------------------------------------------- |
-| `pptagent onboard`  | Interactive configuration wizard                  |
-| `pptagent generate` | Generate presentations                            |
-| `pptagent config`   | View current configuration                        |
-| `pptagent reset`    | Reset configuration                               |
-| `pptagent serve`    | Start the local inference service used by the CLI |
-
-### Docker Images
-
-DeepPresenter publishes two runtime images:
-
-| Local image name | Purpose | Docker Hub | 1ms.run mirror |
-| --- | --- | --- | --- |
-| `deeppresenter-host` | Host service for the web UI and orchestration runtime | [`forceless/deeppresenter-host`](https://hub.docker.com/r/forceless/deeppresenter-host) | [`docker.1ms.run/forceless/deeppresenter-host`](https://1ms.run/r/forceless/deeppresenter-host) |
-| `deeppresenter-sandbox` | Sandbox image used by the runtime for isolated tool execution | [`forceless/deeppresenter-sandbox`](https://hub.docker.com/r/forceless/deeppresenter-sandbox) | [`docker.1ms.run/forceless/deeppresenter-sandbox`](https://1ms.run/r/forceless/deeppresenter-sandbox) |
-
-### 2. Minimal Setup / Development: Build From Source
-
-Use this mode if you want the smallest abstraction layer and full control over dependencies during development.
+On macOS, install the system dependencies with Homebrew:
 
 ```bash
-uv pip install -e .
-playwright install-deps
-playwright install chromium
-npm install --prefix deeppresenter/html2pptx
-modelscope download forceless/fasttext-language-id
-
-docker pull forceless/deeppresenter-sandbox
-docker pull forceless/deeppresenter-host
-docker tag forceless/deeppresenter-sandbox deeppresenter-sandbox
-docker tag forceless/deeppresenter-host deeppresenter-host
-
-# or pull through the 1ms.run mirror
-docker pull docker.1ms.run/forceless/deeppresenter-sandbox
-docker pull docker.1ms.run/forceless/deeppresenter-host
-docker tag docker.1ms.run/forceless/deeppresenter-sandbox deeppresenter-sandbox
-docker tag docker.1ms.run/forceless/deeppresenter-host deeppresenter-host
-
-# or build from dockerfile
-docker build -t deeppresenter-sandbox -f deeppresenter/docker/SandBox.Dockerfile .
-docker build -t deeppresenter-host -f deeppresenter/docker/Host.Dockerfile .
+brew install node
+brew install --cask libreoffice google-chrome
+ln -sf "$(command -v soffice)" "$(brew --prefix)/bin/libreoffice"
 ```
 
-Start the app:
+Clone the repository and install the skill's dependencies. If you already have a checkout, start from its `skills/pptagent/` directory:
 
 ```bash
-python webui.py
+git clone https://github.com/icip-cas/PPTAgent.git
+cd PPTAgent/skills/pptagent
+
+uv venv --python 3.12 .venv
+uv pip install --python .venv/bin/python -r requirements.txt
+.venv/bin/python -m playwright install --with-deps chromium
 ```
 
-### 3. Server Deployment: Docker Compose
+### 2. Register with your coding agent
 
-Use this mode for a stable server environment with explicit dependencies.
+Run the command for your client from `skills/pptagent/`.
+
+**Claude Code**
 
 ```bash
-# Pull the public images to avoid build from source
-docker pull forceless/deeppresenter-sandbox
-docker pull forceless/deeppresenter-host
-docker tag forceless/deeppresenter-sandbox deeppresenter-sandbox
-docker tag forceless/deeppresenter-host deeppresenter-host
-
-# Or pull through the 1ms.run mirror
-docker pull docker.1ms.run/forceless/deeppresenter-sandbox
-docker pull docker.1ms.run/forceless/deeppresenter-host
-docker tag docker.1ms.run/forceless/deeppresenter-sandbox deeppresenter-sandbox
-docker tag docker.1ms.run/forceless/deeppresenter-host deeppresenter-host
-
-# Or build from source
-docker build -t deeppresenter-sandbox -f deeppresenter/docker/SandBox.Dockerfile .
-docker build -t deeppresenter-host -f deeppresenter/docker/Host.Dockerfile .
-
-# Start the host service
-docker compose up -d
+.venv/bin/python scripts/install.py --client claude
 ```
 
-The service exposes the web UI on `http://localhost:7861`.
+**Codex CLI**
 
-## Case Study 💡
+```bash
+.venv/bin/python scripts/install.py --client codex
+```
 
-- #### Prompt: Please present the given document to me.
+**OpenCode**
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+```bash
+.venv/bin/python scripts/install.py --client opencode
+```
 
-  <img src="resource/v2/manuscript/0001.jpg" alt="图片1" width="200"/>
+The installer prepares Node dependencies and registers the skill for the selected client. Keep the repository in place, then check the installation:
 
-  <img src="resource/v2/manuscript/0002.jpg" alt="图片2" width="200"/>
+```bash
+.venv/bin/python scripts/pptagent.py doctor
+```
 
-  <img src="resource/v2/manuscript/0003.jpg" alt="图片3" width="200"/>
+For OpenCode visual MCP configuration and the complete workflow, continue with
+the [OpenCode setup guide](skills/pptagent/README.md#opencode-setup).
 
-  <img src="resource/v2/manuscript/0004.jpg" alt="图片4" width="200"/>
+<a id="quick-start"></a>
 
-  <img src="resource/v2/manuscript/0005.jpg" alt="图片5" width="200"/>
+## Quick Start with Atria Dawn Preview 🚀
 
-  <img src="resource/v2/manuscript/0006.jpg" alt="图片6" width="200"/>
+This example uses **Atria Dawn Preview** to write and revise the slides, with an external visual model to review them. Complete the installation above, then create an API key in the [Atria console](https://api.atria-asi.ai/console/keys).
 
-  <img src="resource/v2/manuscript/0007.jpg" alt="图片7" width="200"/>
+### 1. Set up text-mode visual review
 
-  <img src="resource/v2/manuscript/0008.jpg" alt="图片8" width="200"/>
+You can use a multimodal vision model as a multimodal reviewer and apply for an API token through the [Duanyan (端砚) Token Plan](https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=1). We recommend `deepseek-v4-flash-vision` as the multimodal model.
 
-  <img src="resource/v2/manuscript/0009.jpg" alt="图片9" width="200"/>
+In `skills/pptagent/config.yaml`, use the example below and replace `base_url` with the OpenAI-compatible API base URL shown in your Duanyan console:
 
-  <img src="resource/v2/manuscript/0010.jpg" alt="图片10" width="200"/>
+```yaml
+mode: text
+visual:
+  base_url: "<OpenAI-compatible API base URL from the Duanyan console>"
+  model: "deepseek-v4-flash-vision"
+  api_key_env: VISUAL_API_KEY
+  timeout_seconds: 300
+delivery:
+  mode: strict
+```
 
-</div>
+Save your Duanyan API key in `skills/pptagent/.env`:
 
-- #### Prompt: 请介绍小米 SU7 的外观和价格
+```dotenv
+VISUAL_API_KEY=<your-duanyan-api-key>
+```
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+Atria writes the slides through the text workflow; `deepseek-v4-flash-vision` reviews the rendered images. The skill appends `/chat/completions` to `base_url`; use the API prefix from the console, not the Token Plan webpage URL. With an image-capable host model, you can use `mode: multimodal` instead. See [visual review configuration](skills/pptagent/README.md#visual-review) for details.
 
-  <img src="resource/v2/presentation1/0001.jpg" alt="图片1" width="200"/>
+### 2. Launch your coding agent with Atria
 
-  <img src="resource/v2/presentation1/0002.jpg" alt="图片2" width="200"/>
+Set your Atria key and open a separate task folder:
 
-  <img src="resource/v2/presentation1/0003.jpg" alt="图片3" width="200"/>
+```bash
+export ATRIA_API_KEY="<your-atria-api-key>"
+mkdir -p ~/pptagent-demo
+cd ~/pptagent-demo
+```
 
-  <img src="resource/v2/presentation1/0004.jpg" alt="图片4" width="200"/>
+Choose the client you registered during installation.
 
-  <img src="resource/v2/presentation1/0005.jpg" alt="图片5" width="200"/>
+**Claude Code** — launch through Atria's Messages API:
 
-  <img src="resource/v2/presentation1/0006.jpg" alt="图片6" width="200"/>
+```bash
+ANTHROPIC_BASE_URL=https://api.atria-asi.ai \
+ANTHROPIC_AUTH_TOKEN="$ATRIA_API_KEY" \
+claude --model Atria-Dawn-Preview
+```
 
-</div>
+**Codex CLI** — merge the following into `~/.codex/config.toml`. Keep `model` and `model_provider` at the top level, before any section headers, and update existing entries rather than duplicating them:
 
-- #### Prompt: 请制作一份高中课堂展示课件，主题为“解码立法过程：理解其对国际关系的影响”
+```toml
+model = "Atria-Dawn-Preview"
+model_provider = "atria"
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+[model_providers.atria]
+name = "Atria"
+base_url = "https://api.atria-asi.ai/v1"
+env_key = "ATRIA_API_KEY"
+wire_api = "responses"
+```
 
-  <img src="resource/v2/presentation2/0001.jpg" alt="图片1" width="200"/>
+Then run `codex` from the same terminal. It uses Atria's Responses API and reads `ATRIA_API_KEY` from your environment.
 
-  <img src="resource/v2/presentation2/0002.jpg" alt="图片2" width="200"/>
+**OpenCode** — configure Atria through your normal OpenCode provider settings,
+then follow the [OpenCode setup guide](skills/pptagent/README.md#opencode-setup)
+to connect the visual review tools.
 
-  <img src="resource/v2/presentation2/0003.jpg" alt="图片3" width="200"/>
+### 3. Create your first presentation
 
-  <img src="resource/v2/presentation2/0004.jpg" alt="图片4" width="200"/>
+Send this request in your Atria-powered session:
 
-  <img src="resource/v2/presentation2/0005.jpg" alt="图片5" width="200"/>
+```text
+Use the pptagent skill to create a 6-slide presentation about how our
+engineering team can adopt AI coding assistants. Use a clean 16:9 layout.
+Render and visually review the slides and the exported deck, then deliver
+an editable answer.pptx.
+```
 
-  <img src="resource/v2/presentation2/0006.jpg" alt="图片6" width="200"/>
+You can also invoke the skill explicitly with `/pptagent` in Claude Code or `$pptagent` in Codex. In OpenCode, ask it to use the `pptagent` skill. Continue in the same session to revise the deck:
 
-  <img src="resource/v2/presentation2/0007.jpg" alt="图片7" width="200"/>
+```text
+Turn slide 3 into a workflow diagram and shorten the recommendations.
+Keep the deck at 6 slides, rebuild it, and review the updated PPTX.
+```
 
-  <img src="resource/v2/presentation2/0008.jpg" alt="图片8" width="200"/>
-
-  <img src="resource/v2/presentation2/0009.jpg" alt="图片9" width="200"/>
-
-  <img src="resource/v2/presentation2/0010.jpg" alt="图片10" width="200"/>
-
-  <img src="resource/v2/presentation2/0011.jpg" alt="图片11" width="200"/>
-
-  <img src="resource/v2/presentation2/0012.jpg" alt="图片12" width="200"/>
-
-  <img src="resource/v2/presentation2/0013.jpg" alt="图片13" width="200"/>
-
-  <img src="resource/v2/presentation2/0014.jpg" alt="图片14" width="200"/>
-
-  <img src="resource/v2/presentation2/0015.jpg" alt="图片15" width="200"/>
-
-</div>
-
----
+Your task folder keeps **`answer.pptx`**, editable HTML sources, previews, and the review report. See the [Skill guide](skills/pptagent/README.md) for details and [optional MinerU and search tools](skills/pptagent/README.md#configuration) for richer source material.
 
 ## Contributors 🌟
 
@@ -324,17 +234,17 @@ The service exposes the web UI on `http://localhost:7861`.
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 120.0; height: 120.0">
-        <a href=https://github.com/Sadahlu>
-            <img src=https://avatars.githubusercontent.com/u/126563707?v=4 width="80;"  alt=Sadahlu/>
-            <br />
-            <sub style="font-size:14px"><b>Sadahlu</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 120.0; height: 120.0">
         <a href=https://github.com/lnennnn>
             <img src=https://avatars.githubusercontent.com/u/124434018?v=4 width="80;"  alt=lnennnn/>
             <br />
             <sub style="font-size:14px"><b>lnennnn</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 120.0; height: 120.0">
+        <a href=https://github.com/Sadahlu>
+            <img src=https://avatars.githubusercontent.com/u/126563707?v=4 width="80;"  alt=Sadahlu/>
+            <br />
+            <sub style="font-size:14px"><b>Sadahlu</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 120.0; height: 120.0">
@@ -433,6 +343,15 @@ The service exposes the web UI on `http://localhost:7861`.
         </a>
     </td>
 </tr>
+<tr>
+    <td align="center" style="word-wrap: break-word; width: 120.0; height: 120.0">
+        <a href=https://github.com/wangzh12023>
+            <img src=https://avatars.githubusercontent.com/u/146173014?v=4 width="80;"  alt="Zihan Wang"/>
+            <br />
+            <sub style="font-size:14px"><b>Zihan Wang</b></sub>
+        </a>
+    </td>
+</tr>
 </table>
 
 [![Star History Chart](https://api.star-history.com/svg?repos=icip-cas/PPTAgent&type=Date)](https://star-history.com/#icip-cas/PPTAgent&Date)
@@ -440,6 +359,7 @@ The service exposes the web UI on `http://localhost:7861`.
 ## Citation 🙏
 
 If you find this project helpful, please use the following to cite it:
+
 ```bibtex
 @inproceedings{zheng-etal-2025-pptagent,
     title = "{PPTA}gent: Generating and Evaluating Presentations Beyond Text-to-Slides",
